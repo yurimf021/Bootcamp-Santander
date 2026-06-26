@@ -33,27 +33,27 @@ public class Carro {
         }
 
         if (marcha == 1 && velocidade >= 20) {
-            System.out.println("Corte de giro! Limite da 1ª marcha atingido (20 km/h). Troque para a 2ª marcha!");
+            System.out.println("Limite da 1ª marcha atingido (20 km/h). Troque para a 2ª marcha!");
             return;
         }
         if (marcha == 2 && velocidade >= 40) {
-            System.out.println("Corte de giro! Limite da 2ª marcha atingido (40 km/h). Troque para a 3ª marcha!");
+            System.out.println("Limite da 2ª marcha atingido (40 km/h). Troque para a 3ª marcha!");
             return;
         }
         if (marcha == 3 && velocidade >= 60) {
-            System.out.println("Corte de giro! Limite da 3ª marcha atingido (60 km/h). Troque para a 4ª marcha!");
+            System.out.println("Limite da 3ª marcha atingido (60 km/h). Troque para a 4ª marcha!");
             return;
         }
         if (marcha == 4 && velocidade >= 80) {
-            System.out.println("Corte de giro! Limite da 4ª marcha atingido (80 km/h). Troque para a 5ª marcha!");
+            System.out.println("Limite da 4ª marcha atingido (80 km/h). Troque para a 5ª marcha!");
             return;
         }
         if (marcha == 5 && velocidade >= 100) {
-            System.out.println("Corte de giro! Limite da 5ª marcha atingido (100 km/h). Troque para a 6ª marcha!");
+            System.out.println("Limite da 5ª marcha atingido (100 km/h). Troque para a 6ª marcha!");
             return;
         }
         if (marcha == 6 && velocidade >= 120) {
-            System.out.println("Velocidade máxima do carro atingida (120 km/h)!");
+            System.out.println("Velocidade máxima do carro atingida! (120 km/h)");
             return;
         }
 
@@ -69,9 +69,9 @@ public class Carro {
         }
         if (velocidade > 0) {
             velocidade -= 1;
-            System.out.println("Travando... Velocidade atual: " + velocidade + " km/h");
+            System.out.println("Reduzindo... Velocidade atual: " + velocidade + " km/h");
         } else {
-            System.out.println("O carro já está completamente imobilizado (0 km/h).");
+            System.out.println("O carro já está parado. (0 km/h).");
         }
     }
 
@@ -83,9 +83,9 @@ public class Carro {
         if (velocidade >= 1 && velocidade <= 40) {
             System.out.printf("Curva realizada para a %s com segurança!\n", direcao);
         } else if (velocidade == 0) {
-            System.out.println("Erro: O carro está parado, não é possível curvar.");
+            System.out.println("Erro: O carro está parado, não é possível realizar a curva.");
         } else {
-            System.out.println("Erro: Velocidade muito perigosa para curvar! (Apenas entre 1 e 40 km/h)");
+            System.out.println("Erro: Velocidade muito perigosa para realizar a curva! (Apenas entre 1 e 40 km/h)");
         }
     }
 
@@ -95,7 +95,7 @@ public class Carro {
 
     public void TrocarMarcha(int acao) {
         if (!ligado) {
-            System.out.println("Erro: Carro desligado não troca marcha.");
+            System.out.println("Erro: O carro está desligado .");
             return;
         }
 
@@ -119,9 +119,9 @@ public class Carro {
                 marcha = 6;
                 System.out.println("Engatou a 6ª marcha!");
             } else if (marcha == 6) {
-                System.out.println("Erro: Já te encontras na última marcha!");
+                System.out.println("Erro: Você ja está na última marcha!");
             } else {
-                System.out.println("Acelera mais um pouco antes de subires a marcha (Ex: a 2ª marcha exige 20 km/h)!");
+                System.out.println("Acelere mais para trocar de marcha!");
             }
             
         } else if (acao == 2) { 
@@ -142,14 +142,14 @@ public class Carro {
                 System.out.println("Reduziu para a 1ª marcha!");
             } else if (marcha == 1 && velocidade == 0) {
                 marcha = 0;
-                System.out.println("Desengatou para o Ponto Morto (0)!");
+                System.out.println("Desengatou para o Ponto Morto !");
             } else if (marcha == 0) {
                 System.out.println("Erro: O carro já está em ponto morto!");
             } else {
-                System.out.println("Diminui a velocidade primeiro! Reduzir a marcha agora pode estoirar o motor!");
+                System.out.println("Reduza a velocidade antes antes de trocar a marcha!");
             }
         } else {
-            System.out.println("Opção inválida. Utiliza 1 para subir ou 2 para reduzir a marcha.");
+            System.out.println("Opção inválida. Utilize 1 para subir ou 2 para reduzir a marcha.");
         }
     }
 }
