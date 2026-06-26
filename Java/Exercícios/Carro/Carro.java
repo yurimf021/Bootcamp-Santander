@@ -13,11 +13,12 @@ public class Carro {
     }
 
     public void Desligar() {
-        if (marcha == 0 && velocidade == 0) {
+        if (marcha == 0 && velocidade == 0 && ligado == true) {
             ligado = false;
             System.out.println("O carro foi desligado com segurança.");
-        } else {
-            System.out.println("Erro: Para desligar, o carro deve estar a 0 km/h e em ponto morto (marcha 0).");
+        }
+         else {
+            System.out.println("Erro: Para desligar, o carro deve estar ligado a 0 km/h e em ponto morto (marcha 0).");
         }
     }
 
