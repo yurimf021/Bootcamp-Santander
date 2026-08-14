@@ -57,8 +57,8 @@ public class Main {
                     meuCarro.TrocarMarcha(acaoMarcha);
                     break;
                 case 0:
-                    System.out.println("\nVocê saiu do carro. Até logo!");
-                    continuar = 1;
+                    System.out.println("\n");
+                    meuCarro.Sair();
                     break;
                 default:
                     System.out.println("\nOpção inválida! Tenta novamente.");
