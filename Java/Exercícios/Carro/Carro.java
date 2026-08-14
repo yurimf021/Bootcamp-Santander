@@ -152,4 +152,11 @@ public class Carro {
             System.out.println("Opção inválida. Utilize 1 para subir ou 2 para reduzir a marcha.");
         }
     }
-}
+    public void Sair(){
+        if (ligado == false){
+        System.out.println("Você saiu do carro, até logo!");
+        }else{
+            System.out.println("Desligue o carro antes de sair.");
+        }
+    }
+    }
